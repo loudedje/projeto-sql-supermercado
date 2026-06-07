@@ -81,8 +81,8 @@ INSERT INTO analytics.Products (name, category, brand, price, stock_quantity, su
 ('Esponja de Aço (pacote c/ 8)', 'Limpeza', 'Casa & Cia', 5.90, 150, 16), ('Chá de Camomila (caixa c/ 10)', 'Mercearia', 'Aromas', 6.20, 120, 21),
 ('Adoçante Líquido (100ml)', 'Mercearia', 'Bem-Estar', 8.50, 130, 9), ('Gelatina em Pó (caixa)', 'Doces', 'Fantasia', 2.50, 400, 11);
 
--- Clientes (1 a 50 - AGORA COM 50 CLIENTES DE VERDADE)
-INSERT INTO analytics.Customers (FirstName, LastName, Email, Registration_date, city, birth_date) VALUES
+-- Clientes (1 a 50)
+INSERT INTO analytics.Customers (first_name, last_name, email, registration_date, city, birth_date) VALUES
 ('Ana', 'Silva', 'ana.silva@email.com', '2023-01-15 10:00:00', 'São Paulo', '1990-05-21'),('Bruno', 'Santos', 'bruno.santos@email.com', '2023-01-16 11:30:00', 'Rio de Janeiro', '1985-03-12'),
 ('Carla', 'Oliveira', 'carla.o@email.com', '2023-02-10 14:20:00', 'Belo Horizonte', '1992-11-30'),('Daniel', 'Pereira', 'daniel.p@email.com', '2023-02-20 09:00:00', 'São Paulo', '1988-07-07'),
 ('Eduarda', 'Costa', 'eduarda.costa@email.com', '2023-03-05 18:00:00', 'Rio de Janeiro', '2000-01-15'),('Felipe', 'Rodrigues', 'felipe.r@email.com', '2023-03-12 12:00:00', 'Belo Horizonte', '1995-09-10'),
@@ -126,7 +126,7 @@ INSERT INTO analytics.Sales_Header (customer_id, employee_id, store_id, date_key
 (25, 1, 1, 20250110, '2025-01-10 10:05:00', 3.20), (26, 3, 2, 20250118, '2025-01-18 11:10:00', 16.19),
 (27, 5, 3, 20250204, '2025-02-04 14:05:00', 16.25), (28, 2, 1, 20250220, '2025-02-20 19:15:00', 45.00),
 (29, 4, 2, 20250312, '2025-03-12 12:05:00', 17.00), (30, 6, 3, 20250328, '2025-03-28 16:10:00', 24.55),
-(31, 7, 4, 20250414, '2025-04-14 09:05:00', 14.40), (32, 18, 8, 20250422, '2024-04-22 18:15:00', 11.00),
+(31, 7, 4, 20250414, '2025-04-14 09:05:00', 14.40), (32, 18, 8, 20250422, '2025-04-22 18:15:00', 11.00),
 (33, 30, 13, 20250505, '2025-05-05 11:40:00', 17.75), (34, 40, 3, 20250519, '2025-05-19 15:05:00', 16.20),
 (35, 44, 5, 20250610, '2025-06-10 13:10:00', 79.90), (36, 45, 6, 20250625, '2025-06-25 17:05:00', 16.19),
 (37, 1, 1, 20250716, '2025-07-16 10:10:00', 15.30), (38, 3, 2, 20250731, '2025-07-31 14:35:00', 9.80),
@@ -139,7 +139,7 @@ INSERT INTO analytics.Sales_Header (customer_id, employee_id, store_id, date_key
 
 INSERT INTO analytics.Sales_Items (sale_id, product_id, quantity, price_at_sale, total_item_value) VALUES
 (1, 1, 1, 5.50, 5.50), (1, 2, 1, 12.80, 12.80), (2, 3, 1, 3.20, 3.20), (2, 4, 1, 8.99, 8.99),
-(3, 5, 11, 0.75, 8.25), (4, 7, 1, 79.90, 79.90), (4, 4, 1, 8.99, 8.99), (4, 5, 1, 0.75, 0.82),
+(3, 5, 11, 0.75, 8.25), (4, 7, 1, 79.90, 79.90), (4, 4, 1, 8.99, 8.99), (4, 5, 1, 0.75, 0.75),
 (5, 9, 2, 9.80, 19.60), (5, 10, 1, 7.20, 7.20), (5, 5, 7, 0.75, 5.55), (6, 1, 1, 5.50, 5.50),
 (6, 6, 1, 6.50, 6.50), (6, 3, 1, 3.20, 3.20), (7, 8, 1, 22.50, 22.50), (8, 10, 1, 7.20, 7.20),
 (9, 2, 1, 12.80, 12.80), (9, 3, 1, 3.20, 3.20), (10, 7, 1, 79.90, 79.90), (10, 8, 1, 22.50, 22.50),

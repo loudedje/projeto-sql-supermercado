@@ -16,10 +16,10 @@ CREATE TABLE analytics.Suppliers (
 
 CREATE TABLE analytics.Customers (
     customer_id SERIAL PRIMARY KEY,
-    FirstName VARCHAR(100) NOT NULL,
-    LastName VARCHAR(100) NOT NULL,
-    Email VARCHAR(255) UNIQUE,
-    Registration_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) UNIQUE,
+    registration_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     city VARCHAR(100),
     birth_date DATE
 );
@@ -86,3 +86,10 @@ CREATE TABLE analytics.Sales_Items (
     CONSTRAINT fk_item_sale_header FOREIGN KEY(sale_id) REFERENCES analytics.Sales_Header(sale_id),
     CONSTRAINT fk_item_product FOREIGN KEY(product_id) REFERENCES analytics.Products(product_id)
 );
+
+CREATE INDEX idx_sales_header_date     ON analytics.Sales_Header(date_key);
+CREATE INDEX idx_sales_header_store    ON analytics.Sales_Header(store_id);
+CREATE INDEX idx_sales_header_customer ON analytics.Sales_Header(customer_id);
+CREATE INDEX idx_sales_items_sale      ON analytics.Sales_Items(sale_id);
+CREATE INDEX idx_sales_items_product   ON analytics.Sales_Items(product_id);
+CREATE INDEX idx_products_category     ON analytics.Products(category);
